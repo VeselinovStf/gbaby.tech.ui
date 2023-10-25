@@ -1,6 +1,6 @@
 [build]
-  command="ng build"
-  publish="dist/gbaby_tech_ui_v01"
+  command = "npm run build:prod"
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
