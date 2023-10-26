@@ -29,8 +29,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-                "node_modules/jquery/dist/jquery.min.js",
-                "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -94,6 +94,14 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/gbaby_tech_ui_v01",
+            "netlifyToken": "j3-oJtTH3FlltJPkh71NFeau9aDFYCndogJyp74L5Fo",
+            "siteId": "92c51f96-14a7-4e9f-9948-622a6fce8748"
           }
         }
       }
