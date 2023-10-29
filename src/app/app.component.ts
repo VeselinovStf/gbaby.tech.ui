@@ -29,8 +29,7 @@ export class AppComponent implements OnInit {
         this.homePage = data;
 
         this.header = this.homePage.content.filter(x => x.key == 'header')[0];
-        this.footer = this.homePage.content.filter(x => x.key == 'footer')[0];
-
+       
         this.isDataLoaded = true;
 
       }).catch((error) => {
@@ -51,8 +50,4 @@ export class AppComponent implements OnInit {
     return this.header;
   }
 
-
-  getFooter() {
-    return this.footer;
-  }
 }

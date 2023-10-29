@@ -33,4 +33,22 @@ export class NavigationService {
       }
 }[0]`);
   }
+
+  socialNav(): Promise<any> {
+    return this.sanityService.getClient().option.fetch(`*[_type == "siteConfig"]{
+      socialNav->{ 
+        _id,
+        title{
+          "text":${this.selectedLocale.name}
+        },
+        items[]{
+          internalHref,
+          text{
+            "text":${this.selectedLocale.name}
+          },
+          navigationItemUrl
+        }
+      }
+}[0]`);
+  }
 }
