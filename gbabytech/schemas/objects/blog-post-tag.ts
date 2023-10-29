@@ -16,7 +16,7 @@ export default defineType({
     ],
     preview: {
         select: {
-            title: `text.${baseLanguage!.id}`
+            title: `title.${baseLanguage!.id}`
         }
     }
 })

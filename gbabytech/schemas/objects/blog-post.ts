@@ -30,10 +30,11 @@ export default defineType({
             type: "link",
             title: "Navigation Item URL"
         },
-         {
-            name: "author",
-             type: "blog-post-author",
-            title: "Author"
+        {
+            name: 'author',
+            type: 'reference',
+            description: 'Author',
+            to: { type: 'blog-authors-page' },
         },
         {
             name: 'mainImage',

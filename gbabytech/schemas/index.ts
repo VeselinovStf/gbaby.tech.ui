@@ -9,6 +9,7 @@ import siteConfig from "./siteConfig";
 import pageContent from "./documents/pageContent";
 import boxItem from "./objects/boxItem";
 import homePage from "./documents/home-page";
+import blogAuthorsPage from "./documents/blog-authors-page";
 import blogPage from "./documents/blog-page";
 import { localeString } from "./locale";
 
@@ -26,5 +27,6 @@ export const schemaTypes = [
     blogPage,
     blogPost,
     blogTag,
-    blogAuthor
+    blogAuthor,
+    blogAuthorsPage
 ]

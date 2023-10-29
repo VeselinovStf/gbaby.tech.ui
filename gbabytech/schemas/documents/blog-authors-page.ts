@@ -2,9 +2,9 @@ import { defineType } from "sanity";
 import { baseLanguage } from "../locale";
 
 export default defineType({
-    name: 'blog-post-author',
-    title: 'Post Author',
-    type: 'object',
+    name: 'blog-authors-page',
+    title: 'Authors',
+    type: 'document',
     fields: [
         {
             name: "name",
