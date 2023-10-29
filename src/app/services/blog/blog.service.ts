@@ -19,31 +19,12 @@ export class BlogService {
 
   getPost(id: string | null): Promise<any>  {
     return this.sanityService.getClient().option.fetch(`*[_type == "post" && href == "${id}"]{
-  content,
-   mainImage{
-      asset->{
-        url
-      }
-    },
-  title{
-    ${this.selectedLocale.name}
-  },
-  href,
-    description{
-    ${this.selectedLocale.name}
-    },
-  author->{
-    name{
-    ${this.selectedLocale.name}
+      tags[]{
+    title{
+      "text": en
     }
-  }
-}
-`);
-  }
-
-  getAllPosts(): Promise<any> {
-    return this.sanityService.getClient().option.fetch(`*[_type == "post"]{
-  content,
+  },
+    content,
    mainImage{
       asset->{
         url
@@ -52,7 +33,30 @@ export class BlogService {
   title{"text": en},
   href,
   description{"text": en},
-  author->{name{en}}  
+  author->{name{ "text": en}}  ,
+  category->{name{ "text": en}}  
+}
+`);
+  }
+
+  getAllPosts(): Promise<any> {
+    return this.sanityService.getClient().option.fetch(`*[_type == "post"]{
+      tags[]{
+    title{
+      "text": en
+    }
+  },
+  content,
+  mainImage{
+      asset->{
+        url
+      }
+    },
+  title{"text": en},
+  href,
+  description{"text": en},
+  author->{name{ "text": en}}  ,
+  category->{name{ "text": en}}   
 }`);
   }
 }

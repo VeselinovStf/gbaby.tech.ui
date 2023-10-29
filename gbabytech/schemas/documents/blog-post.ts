@@ -37,6 +37,12 @@ export default defineType({
             to: { type: 'blog-authors-page' },
         },
         {
+            name: 'category',
+            type: 'reference',
+            description: 'Category',
+            to: { type: 'blog-category-page' },
+        },
+        {
             name: 'mainImage',
             title: 'Main image',
             type: 'image',

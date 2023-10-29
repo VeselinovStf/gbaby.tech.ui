@@ -1,3 +1,4 @@
+import { IBlogPostCategory } from "./blog-post-category";
 import { IBlogPostAuthor } from "./iblog-post-author";
 import { IBlogPostTag } from "./iblog-post-tag";
 import { IImage } from "./iimage";
@@ -9,6 +10,8 @@ export interface IBlogPost {
     href: string;
     date: Date;
     author: IBlogPostAuthor;
+    category: IBlogPostCategory;
     mainImage: IImage;
     tags: IBlogPostTag[];
+    content: any;
 }

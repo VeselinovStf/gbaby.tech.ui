@@ -11,7 +11,8 @@ import boxItem from "./objects/boxItem";
 import homePage from "./documents/home-page";
 import blogAuthorsPage from "./documents/blog-authors-page";
 import { localeString } from "./locale";
-import  contentType  from "./types/content";
+import contentType from "./types/content";
+import blogCategoryPage from "./documents/blog-category-page";
 
 
 export const schemaTypes = [
@@ -28,5 +29,6 @@ export const schemaTypes = [
     blogTag,
     blogAuthor,
     blogAuthorsPage,
-    contentType
+    contentType,
+    blogCategoryPage
 ]

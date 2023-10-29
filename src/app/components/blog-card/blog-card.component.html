@@ -3,7 +3,7 @@
         <img src="{{post.mainImage.asset.url}}" alt="">
     </div>
     <div class="down-content">
-        <span>Lifestyle</span>
+        <span>{{post.category.name.text}}</span>
         <a [routerLink]="['/blog', post.href ]">
             <h4>{{post.title.text}}</h4>
         </a>
