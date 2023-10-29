@@ -1,12 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogHomeComponent } from './blog/blog-home/blog-home.component';
-import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { AuthGuard } from '@auth0/auth0-angular';
+import { DemoComponent } from './private/demo/demo.component';
+import { BlogHomeComponent } from './components/blog-home/blog-home.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { PageNotfoundComponent } from './components/page-notfound/page-notfound.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'blog' }  ,
-  { path: "blog", component: BlogHomeComponent },
-  { path: "blog/{:id}", component: BlogPostComponent }
+  { path: 'demo', component: DemoComponent, canActivate: [AuthGuard] },
+  { path: 'blog', component: BlogHomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent }, 
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
+  { path: '**', component: PageNotfoundComponent }
 ];
 
 @NgModule({

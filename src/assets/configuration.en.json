@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "title": "HOV TITLE",
+    "navbar": [
+      {
+        "name": "About Page",
+        "link": "about"
+      },
+      {
+        "name": "Services Name",
+        "link": "services"
+      },
+      {
+        "name": "Portfolio Name",
+        "link": "portfolio"
+      },
+      {
+        "name": "Contact Name",
+        "link": "contact"
+      },
+      {
+        "name": "Try NOW",
+        "link": "/contact"
+      }
+    ]
+  },
+  "nav_link": {
+    "title": "HOV TITLE",
+    "navbar": [
+      {
+        "name": "About Name",
+        "link": "/#about"
+      },
+      {
+        "name": "Services Name",
+        "link": "/#services"
+      },
+      {
+        "name": "Portfolio Name",
+        "link": "/#portfolio"
+      },
+      {
+        "name": "Contact Name",
+        "link": "#contact"
+      }
+    ]
+  },
+  "header": {
+    "title": "Your Favorite Source of Free Bootstrap Themes",
+    "parag": "Very long interesting words here please!",
+    "buttonText": "Find Out More Here!da",
+    "buttonHREF": "about",
+    "backgroundImage": "assets/img/header.jpg"
+  },
+  "call_to_action": {
+    "title": "BIG TITLE OVER HERE PLEASE!",
+    "parag": "Very long interesting words here please!",
+    "buttonText": "Find Out More Here!",
+    "buttonHREF": "about"
+  },
+  "services": {
+    "title": "Services HERE",
+    "box": [
+      {
+        "title": "Title Here 1",
+        "text": "TExt HERE 1",
+        "icon": "fa-diamond"
+      },
+      {
+        "title": "Title Here 2",
+        "text": "TExt HERE 2",
+        "icon": "fa-diamond"
+      },
+      {
+        "title": "Title Here 3",
+        "text": "TExt HERE 3",
+        "icon": "fa-diamond"
+      },
+      {
+        "title": "Title Here 4",
+        "text": "TExt HERE 4",
+        "icon": "fa-diamond"
+      }
+    ]
+  },
+  "portfolio": {
+    "box": [
+      {
+        "title": "Category",
+        "text": "Project Name",
+        "href": "about",
+        "image": "assets/img/portfolio/1.jpg"
+      },
+      {
+        "title": "Category",
+        "text": "Project Name",
+        "href": "about",
+        "image": "assets/img/portfolio/1.jpg"
+      },
+      {
+        "title": "Category",
+        "text": "Project Name",
+        "href": "about",
+        "image": "assets/img/portfolio/1.jpg"
+      },
+      {
+        "title": "Category",
+        "text": "Project Name",
+        "href": "about",
+        "image": "assets/img/portfolio/1.jpg"
+      },
+      {
+        "title": "Category",
+        "text": "Project Name",
+        "href": "about",
+        "image": "assets/img/portfolio/1.jpg"
+      },
+      {
+        "title": "Category",
+        "text": "Project Name",
+        "href": "about",
+        "image": "assets/img/portfolio/1.jpg"
+      }
+    ]
+  },
+  "aside": {
+    "title": "Title Here",
+    "parag": "Small Text here",
+    "buttonText": "TRY FOR FREE",
+    "buttonHREF": "/form"
+  },
+  "contact": {
+    "title": "Let's Get",
+    "text": "Ready to start your next project with us?"
+  },
+  "form": {
+    "title": "Register for free test drive!",
+    "parag": "Take a free ride among features!",
+    "buttonText": "JOIN ALPHA",
+    "buttonHREF": "/demo",
+    "backgroundImage": "../img/header.jpg"
+  },
+  "donate": {
+    "title": "Help us develop!",
+    "parag": "Create a small donation!"
+  }
+}

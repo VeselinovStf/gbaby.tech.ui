@@ -7,8 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'gbaby.tech',
 
-  projectId: '8i2jrar2',
-  dataset: 'gbaby_tech_blog',
+  projectId: '9eoskxyk',
+  dataset: 'gbaby_tech',
 
   plugins: [deskTool(), visionTool()],
 
