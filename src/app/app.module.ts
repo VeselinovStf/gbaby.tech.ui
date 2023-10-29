@@ -25,6 +25,11 @@ import { ContactComponent } from './components/contact/contact.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { PageNotfoundComponent } from './components/page-notfound/page-notfound.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { BlogPostDetailsComponent } from './components/blog-post-details/blog-post-details.component';
+import { BlogSearchComponent } from './components/blog-search/blog-search.component';
+import { BlogRecentPostsComponent } from './components/blog-recent-posts/blog-recent-posts.component';
+import { BlogCategoriesComponent } from './components/blog-categories/blog-categories.component';
+import { BlogTagsComponent } from './components/blog-tags/blog-tags.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +47,12 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component';
     ContactComponent,
     UnderConstructionComponent,
     PageNotfoundComponent,
-    BlogCardComponent
+    BlogCardComponent,
+    BlogPostDetailsComponent,
+    BlogSearchComponent,
+    BlogRecentPostsComponent,
+    BlogCategoriesComponent,
+    BlogTagsComponent
   ],
   imports: [
     BrowserModule,

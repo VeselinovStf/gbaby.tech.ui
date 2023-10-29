@@ -31,15 +31,15 @@ export class NavComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    let element = document.getElementById('mainNav') as HTMLElement;
+    // let element = document.getElementById('mainNav') as HTMLElement;
 
-    if (window.pageYOffset > 100) {
-      element.classList.remove('affix-top');
-      element.classList.add('affix');
-    } else {
-      element.classList.remove('affix');
-      element.classList.add('affix-top');
-    }
+    // if (window.pageYOffset > 100) {
+    //   element.classList.remove('affix-top');
+    //   element.classList.add('affix');
+    // } else {
+    //   element.classList.remove('affix');
+    //   element.classList.add('affix-top');
+    // }
   }
 
 }

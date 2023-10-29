@@ -15,7 +15,7 @@ export class BlogHomeComponent implements OnInit {
   ngOnInit(): void {
     this.blogService.getAllPosts()
       .then((n) => {
-        this.posts = n.posts;
+        this.posts = n;
         this.isLoaded = true;
       }).catch((error) => {
         console.log("API ERROR");

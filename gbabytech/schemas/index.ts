@@ -1,6 +1,6 @@
 import navigation from "./documents/navigation";
 import link from "./objects/link";
-import blogPost from "./objects/blog-post";
+import blogPost from "./documents/blog-post";
 import blogTag from "./objects/blog-post-tag";
 import blogAuthor from "./objects/blog-post-author";
 import navItem from "./objects/navItem";
@@ -10,8 +10,8 @@ import pageContent from "./documents/pageContent";
 import boxItem from "./objects/boxItem";
 import homePage from "./documents/home-page";
 import blogAuthorsPage from "./documents/blog-authors-page";
-import blogPage from "./documents/blog-page";
 import { localeString } from "./locale";
+import  contentType  from "./types/content";
 
 
 export const schemaTypes = [
@@ -24,9 +24,9 @@ export const schemaTypes = [
     boxItem,
     homePage,
     localeString,
-    blogPage,
     blogPost,
     blogTag,
     blogAuthor,
-    blogAuthorsPage
+    blogAuthorsPage,
+    contentType
 ]

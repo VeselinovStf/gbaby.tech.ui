@@ -3,8 +3,8 @@ import { baseLanguage } from "../locale";
 
 export default defineType({
     name: 'post',
-    title: 'Post',
-    type: 'object',
+    title: 'Blog Posts',
+    type: 'document',
     fields: [
         {
             name: "title",
@@ -51,6 +51,12 @@ export default defineType({
             title: "Tags",
             of: [{ type: "blog-post-tag" }],
             description: 'Blog Post Tags',
+        },
+        {
+            name: "content",
+            type: "content",
+            title: "Content",
+            description: 'Post Content',
         }
     ],
     preview: {

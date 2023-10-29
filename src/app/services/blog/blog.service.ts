@@ -8,6 +8,7 @@ import { IBlogPost } from 'src/app/types/iblog-post';
   providedIn: 'root'
 })
 export class BlogService {
+  
   private selectedLocale: ILocale;
 
   constructor(
@@ -16,33 +17,42 @@ export class BlogService {
     this.selectedLocale = localeService.getLocale();
   }
 
-  getAllPosts(): Promise<any> {
-    return this.sanityService.getClient().option.fetch(`*[_type == "blog-page"]{
-  posts[]{
-    mainImage{
+  getPost(id: string | null): Promise<any>  {
+    return this.sanityService.getClient().option.fetch(`*[_type == "post" && href == "${id}"]{
+  content,
+   mainImage{
       asset->{
         url
       }
     },
-    title{
-        "text":${this.selectedLocale.name}
-    },
-    href,
+  title{
+    ${this.selectedLocale.name}
+  },
+  href,
     description{
-        "text":${this.selectedLocale.name}
+    ${this.selectedLocale.name}
     },
-    date,
-    author{
-      name{
-        "text":${this.selectedLocale.name}
-    }
-    },
-    tags[]{
-      title{
-        "text":${this.selectedLocale.name}
-    }
+  author->{
+    name{
+    ${this.selectedLocale.name}
     }
   }
-}[0]`);
+}
+`);
+  }
+
+  getAllPosts(): Promise<any> {
+    return this.sanityService.getClient().option.fetch(`*[_type == "post"]{
+  content,
+   mainImage{
+      asset->{
+        url
+      }
+    },
+  title{"text": en},
+  href,
+  description{"text": en},
+  author->{name{en}}  
+}`);
   }
 }
