@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/general-ui-2'),
+      dir: require('path').join(__dirname, './coverage/gbaby_tech_ui_v01'),
       subdir: '.',
       reporters: [
         { type: 'html' },
