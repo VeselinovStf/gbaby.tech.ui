@@ -24,6 +24,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { PageNotfoundComponent } from './components/page-notfound/page-notfound.component';
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PageNotfoundComponent } from './components/page-notfound/page-notfound.
     AboutComponent,
     ContactComponent,
     UnderConstructionComponent,
-    PageNotfoundComponent
+    PageNotfoundComponent,
+    BlogCardComponent
   ],
   imports: [
     BrowserModule,

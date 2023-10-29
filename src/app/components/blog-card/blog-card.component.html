@@ -1,0 +1,27 @@
+<div class="blog-post">
+    <div class="blog-thumb">
+        <img src="{{post.mainImage.asset.url}}" alt="">
+    </div>
+    <div class="down-content">
+        <span>Lifestyle</span>
+        <a href="{{post.href}}">
+            <h4>{{post.title.text}}</h4>
+        </a>
+        <ul class="post-info">
+            <li><a href="#">{{post.author.name.text}}</a></li>
+            <li><a href="#">{{post.date}}</a></li>
+        </ul>
+        <p>{{post.description.text}}</p>
+        <div class="post-options">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="post-tags" *ngFor="let tag of post.tags">
+                        <li><i class="fa fa-tags"></i></li>
+                        <li  ><a href="/">{{tag.title.text}}</a>,</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
