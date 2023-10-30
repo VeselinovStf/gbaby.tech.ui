@@ -11,7 +11,7 @@ export class BlogCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.post.category)
+
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Subject, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
 import { BlogService } from 'src/app/services/blog/blog.service';
 
 @Component({
@@ -6,20 +7,37 @@ import { BlogService } from 'src/app/services/blog/blog.service';
   templateUrl: './blog-search.component.html',
   styleUrls: ['./blog-search.component.sass']
 })
-export class BlogSearchComponent implements OnInit {
-  text!: string;
-  constructor(private blogService: BlogService) { }
+export class BlogSearchComponent implements OnInit, OnDestroy {
 
-  ngOnInit(): void {
+  @Input() initialValue: string = '';
+  @Input() debounceTime = 300;
+
+  @Output() textChange = new EventEmitter<string>();
+
+  inputValue = new Subject<string>();
+  
+  trigger = this.inputValue.pipe(
+    debounceTime(this.debounceTime),
+    distinctUntilChanged()
+  );
+
+  subscriptions: Subscription[] = [];
+
+  constructor() {
   }
 
-  search(e:any) {
-    if (!e) {
-      this.text += e.target.value
-    }
-    
-    
-    // Search
+  ngOnInit() {
+    const subscription = this.trigger.subscribe(currentValue => {
+      this.textChange.emit(currentValue);
+    });
+    this.subscriptions.push(subscription);
   }
 
+  ngOnDestroy() {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
+  }
+
+  onInput(e: any) {
+    this.inputValue.next(e.target.value);
+  }
 }

@@ -27,5 +27,4 @@ export class BlogPostDetailsComponent implements OnInit {
         console.log(error)
       })
   }
-
 }

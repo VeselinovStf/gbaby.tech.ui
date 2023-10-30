@@ -41,6 +41,27 @@ export class BlogService {
 
   getAllPosts(): Promise<any> {
     return this.sanityService.getClient().option.fetch(`*[_type == "post"]{
+  tags[]{
+    title{
+      "text": en
+    }
+  },
+  content,
+  mainImage{
+      asset->{
+        url
+      }
+    },
+  title{"text": en},
+  href,
+  description{"text": en},
+  author->{name{ "text": en}}  ,
+  category->{name{ "text": en}}   
+}`);
+  }
+
+  getPostsFiltered(filter: string): Promise<any> {
+    return this.sanityService.getClient().option.fetch(`*[_type == "post"]{
       tags[]{
     title{
       "text": en

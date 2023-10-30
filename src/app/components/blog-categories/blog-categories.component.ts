@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Subject, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
   selector: 'app-blog-categories',
@@ -6,10 +7,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-categories.component.sass']
 })
 export class BlogCategoriesComponent implements OnInit {
+  @Input() categories!: string[];
 
-  constructor() { }
+  @Output() categoryChange = new EventEmitter<string>();
+  @Input() debounceTime = 50;
+  
+  inputValue = new Subject<string>();
 
-  ngOnInit(): void {
+  trigger = this.inputValue.pipe(
+    debounceTime(this.debounceTime),
+    distinctUntilChanged()
+  );
+
+  subscriptions: Subscription[] = [];
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    const subscription = this.trigger.subscribe(currentValue => {
+      this.categoryChange.emit(currentValue);
+    });
+    this.subscriptions.push(subscription);
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
+  }
+
+  onInput(e: any) {
+    this.inputValue.next(e.target.textContent);
   }
 
 }

@@ -3,14 +3,9 @@
         <div class="sidebar-heading">
             <h2>Categories</h2>
         </div>
-        <div class="content">
+        <div class="content" *ngIf="categories">
             <ul>
-                <li><a href="#">- Nature Lifestyle</a></li>
-                <li><a href="#">- Awesome Layouts</a></li>
-                <li><a href="#">- Creative Ideas</a></li>
-                <li><a href="#">- Responsive Templates</a></li>
-                <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                <li><a href="#">- Creative &amp; Unique</a></li>
+                <li  *ngFor="let c of categories"><a (click)="onInput($event)">- {{c}}</a></li>
             </ul>
         </div>
     </div>

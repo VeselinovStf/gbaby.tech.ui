@@ -3,23 +3,23 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="all-blog-posts">
-                    <div class="row">
-                        <div class="col-lg-6" *ngFor="let post of posts">
+                    <div class="row" *ngIf="isLoaded">
+                        <div class="col-lg-6" *ngFor="let post of filteredPosts">
                             <app-blog-card [post]="post"></app-blog-card>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-lg-4">
+            <div class="col-lg-4">
                 <div class="sidebar">
                     <div class="row">
-                        <app-blog-search></app-blog-search>
-                        <app-blog-recent-posts></app-blog-recent-posts>
-                        <app-blog-categories></app-blog-categories>
-                        <app-blog-tags></app-blog-tags>
+                        <app-blog-search (textChange)="onTextChange($event)"></app-blog-search>
+                        <app-blog-recent-posts  [posts]="rescentPosts"></app-blog-recent-posts>
+                        <app-blog-categories (categoryChange)="onCategorySelected($event)" [categories]="categories"></app-blog-categories>
+                        <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </section>
