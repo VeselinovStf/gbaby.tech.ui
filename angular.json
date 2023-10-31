@@ -42,7 +42,8 @@
               "src/assets/js/slick.js",
               "src/assets/js/isotope.js",
               "src/assets/js/accordions.js",
-              "src/assets/js/recaptcha.js"
+              "src/assets/js/recaptcha.js",
+              "src/assets/js/scripts.js"
             ]
           },
           "configurations": {
