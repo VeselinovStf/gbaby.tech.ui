@@ -12,4 +12,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  correctCaptcha(a: any){
+    console.log(a)
+  }
 }
