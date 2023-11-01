@@ -31,6 +31,9 @@ import { BlogRecentPostsComponent } from './components/blog-recent-posts/blog-re
 import { BlogCategoriesComponent } from './components/blog-categories/blog-categories.component';
 import { BlogTagsComponent } from './components/blog-tags/blog-tags.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { CarouselSectionComponent } from './components/carousel-section/carousel-section.component';
+import { TopFeaturesComponent } from './components/top-features/top-features.component';
+import { AboutSectionComponent } from './components/about-section/about-section.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     BlogRecentPostsComponent,
     BlogCategoriesComponent,
     BlogTagsComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    CarouselSectionComponent,
+    TopFeaturesComponent,
+    AboutSectionComponent
   ],
   imports: [
     BrowserModule,

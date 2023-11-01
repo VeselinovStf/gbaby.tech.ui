@@ -29,21 +29,23 @@
               "src/_redirects"
             ],
             "styles": [
-              "src/styles.css",
-              "src/vendor/bootstrap/css/bootstrap.min.css",
-              "src/assets/css/fontawesome.css",
-              "src/assets/css/templatemo-stand-blog.css",
-              "src/assets/css/owl.css"
+           
+              "src/assets/lib/animate/animate.min.css",
+              "src/assets/lib/owlcarousel/assets/owl.carousel.min.css",
+              "src/assets/lib/lightbox/css/lightbox.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/style.css"            
             ],
-            "scripts": [
-              "src/vendor/jquery/jquery.min.js",
-              "src/vendor/bootstrap/js/bootstrap.bundle.min.js",
-              "src/assets/js/owl.js",
-              "src/assets/js/slick.js",
-              "src/assets/js/isotope.js",
-              "src/assets/js/accordions.js",
-              "src/assets/js/recaptcha.js",
-              "src/assets/js/scripts.js"
+            "scripts": [           
+              "src/assets/lib/wow/wow.min.js",
+              "src/assets/lib/easing/easing.min.js",
+              "src/assets/lib/waypoints/waypoints.min.js",
+              "src/assets/lib/owlcarousel/owl.carousel.min.js",
+              "src/assets/lib/counterup/counterup.min.js",
+              "src/assets/lib/parallax/parallax.min.js",
+              "src/assets/lib/isotope/isotope.pkgd.min.js",
+              "src/assets/lib/lightbox/js/lightbox.min.js",
+              "src/assets/js/main.js"     
             ]
           },
           "configurations": {

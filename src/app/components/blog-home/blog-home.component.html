@@ -1,3 +1,43 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4 animated slideInDown">Blog</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Blog</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row" *ngIf="isLoaded">
+            <div class="col-lg-10">
+                <p *ngFor="let post of filteredPosts">
+                    <app-blog-card [post]="post"></app-blog-card>
+                </p>
+
+            </div>
+            <div class="col-lg-2">
+
+                <app-blog-search (textChange)="onTextChange($event)"></app-blog-search>
+                <app-blog-recent-posts [posts]="rescentPosts"></app-blog-recent-posts>
+                <app-blog-categories (categoryChange)="onCategorySelected($event)"
+                    [categories]="categories"></app-blog-categories>
+                <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Team End -->
+<!-- 
 <section class="blog-posts grid-system">
     <div class="container">
         <div class="row">
@@ -14,12 +54,13 @@
                 <div class="sidebar">
                     <div class="row">
                         <app-blog-search (textChange)="onTextChange($event)"></app-blog-search>
-                        <app-blog-recent-posts  [posts]="rescentPosts"></app-blog-recent-posts>
-                        <app-blog-categories (categoryChange)="onCategorySelected($event)" [categories]="categories"></app-blog-categories>
+                        <app-blog-recent-posts [posts]="rescentPosts"></app-blog-recent-posts>
+                        <app-blog-categories (categoryChange)="onCategorySelected($event)"
+                            [categories]="categories"></app-blog-categories>
                         <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
