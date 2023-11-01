@@ -30,6 +30,7 @@ import { BlogSearchComponent } from './components/blog-search/blog-search.compon
 import { BlogRecentPostsComponent } from './components/blog-recent-posts/blog-recent-posts.component';
 import { BlogCategoriesComponent } from './components/blog-categories/blog-categories.component';
 import { BlogTagsComponent } from './components/blog-tags/blog-tags.component';
+import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { BlogTagsComponent } from './components/blog-tags/blog-tags.component';
     BlogSearchComponent,
     BlogRecentPostsComponent,
     BlogCategoriesComponent,
-    BlogTagsComponent
+    BlogTagsComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,
