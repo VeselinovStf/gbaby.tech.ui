@@ -15,7 +15,6 @@ import { HeaderComponent } from './components/sections/header/header.component';
 import { AuthModule } from '@auth0/auth0-angular';
 
 // Private
-import { DemoComponent } from './private/demo/demo.component';
 import { NgxUiLoaderModule } from "ngx-ui-loader";
 import { FooterComponent } from './components/sections/footer/footer.component';
 import { BlogHomeComponent } from './pages/blog/blog-home/blog-home.component';
@@ -42,7 +41,6 @@ import { TopFeaturesComponent } from './components/sections/top-features/top-fea
     AuthButtonComponent,
     AuthLoginButtonComponent,
     AuthLogoutButtonComponent,
-    DemoComponent,
     FooterComponent,
     BlogHomeComponent,
     HomeComponent,
