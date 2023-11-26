@@ -22,6 +22,11 @@ export default defineType({
             name: "navigationItemUrl",
             type: "link",
             title: "Navigation Item URL"
+        },
+        {
+            name: 'icon',
+            title: 'Icon',
+            type: 'string',
         }
     ],
     preview: {

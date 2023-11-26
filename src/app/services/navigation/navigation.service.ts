@@ -16,7 +16,7 @@ export class NavigationService {
       this.selectedLocale = localeService.getLocale();
   }
 
-  mainNavigation(): Promise<any> {
+  getMainNavigation(): Promise<any> {
     return this.sanityService.getClient().option.fetch(`*[_type == "siteConfig"]{
       mainNav->{ 
         _id,
@@ -34,19 +34,56 @@ export class NavigationService {
 }[0]`);
   }
 
-  socialNav(): Promise<any> {
+  getFooterNav(): Promise<any> {
     return this.sanityService.getClient().option.fetch(`*[_type == "siteConfig"]{
       socialNav->{ 
+        _id,     
+        title{
+           "text": ${this.selectedLocale.name}
+        }, 
+        items[]{
+           icon,
+          text{
+            "text": ${this.selectedLocale.name}
+          }
+        }
+      },
+      addressNav->{
         _id,
         title{
-          "text":${this.selectedLocale.name}
+           "text": ${this.selectedLocale.name}
         },
+        
         items[]{
-          internalHref,
+          icon,
           text{
-            "text":${this.selectedLocale.name}
-          },
-          navigationItemUrl
+            "text": ${this.selectedLocale.name}
+          }
+        }
+      },
+      serviceNav->{ 
+        _id,   
+        title{
+           "text": ${this.selectedLocale.name}
+        },
+        
+        items[]{
+           icon,
+          text{
+            "text": ${this.selectedLocale.name}
+          }
+        }
+      },
+      quickLinkNav->{ 
+        _id,    
+          title{
+           "text": ${this.selectedLocale.name}
+        },   
+        items[]{
+          icon,
+          text{
+            "text": ${this.selectedLocale.name}
+          }
         }
       }
 }[0]`);

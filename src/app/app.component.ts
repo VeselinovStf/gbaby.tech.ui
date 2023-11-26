@@ -5,6 +5,8 @@ import { HomePageService } from './services/homePage/home-page.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { IHomePage } from './types/ihomePage';
 import { isDevMode } from '@angular/core';
+import { INav } from './types/inav';
+import { NavigationService } from './services/navigation/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -15,22 +17,55 @@ export class AppComponent implements OnInit {
   header!: IPageContent;
   footer!: IPageContent;
   isDataLoaded!: boolean;
+  topNavigation!: INav;
+  socialNavigation!: INav;
+  serviceNavigation!: INav;
+  quickLinkNavigation!: INav;
+  addressNavigation!: INav;
 
   constructor(
     private router: Router,
     private homePageService: HomePageService,
-    private spinnerService: NgxUiLoaderService) {
+    private spinnerService: NgxUiLoaderService,
+    private navigationService: NavigationService) {
   }
 
   ngOnInit(): void {
     this.spinnerService.start();
+
+    this.navigationService.getMainNavigation()
+      .then((n) => {
+        this.topNavigation = n.mainNav
+
+        this.spinnerService.stop(); // TODO: remove from here
+      }).catch((error) => {
+        if (isDevMode()) {
+          console.log(error)
+        }
+
+      })
+
+    this.navigationService.getFooterNav() // TODO: remove from here
+      .then((n) => {
+
+        this.socialNavigation = n.socialNav
+        this.serviceNavigation = n.serviceNav
+        this.quickLinkNavigation = n.quickLinkNav
+        this.addressNavigation = n.addressNav
+
+      }).catch((error) => {
+        if (isDevMode()) {
+          console.log(error)
+        }
+      })
+
 
     this.homePageService.getHomePage()
       .then((data) => {
         this.homePage = data;
 
         this.header = this.homePage.content.filter(x => x.key == 'header')[0];
-       
+
         this.isDataLoaded = true;
 
       }).catch((error) => {

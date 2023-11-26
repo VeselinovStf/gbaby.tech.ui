@@ -4,4 +4,5 @@ export interface INavbar {
     text: ILocaleString;
     internalHref: string;
     navigationItemUrl: string;
+    icon: string;
 }
