@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
 
       }).catch((error) => {
         if(isDevMode()){
-          console.log("API ERROR: 2");
           console.log(error);
         }      
       })

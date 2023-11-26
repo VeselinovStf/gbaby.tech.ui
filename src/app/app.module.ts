@@ -19,7 +19,7 @@ import { PrivateModule } from './modules/private/private.module';
   declarations: [
     AppComponent,
     NavComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
