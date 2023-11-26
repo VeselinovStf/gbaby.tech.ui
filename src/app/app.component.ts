@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HomePageService } from './services/homePage/home-page.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { IHomePage } from './types/ihomePage';
+import { isDevMode } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -33,8 +34,10 @@ export class AppComponent implements OnInit {
         this.isDataLoaded = true;
 
       }).catch((error) => {
-        console.log("API ERROR: 2");
-        console.log(error);
+        if(isDevMode()){
+          console.log("API ERROR: 2");
+          console.log(error);
+        }      
       })
   }
 

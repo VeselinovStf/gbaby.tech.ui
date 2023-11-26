@@ -5,11 +5,11 @@ import { environment } from 'src/environments/environment';
 
 // Components
 import { AppComponent } from './app.component';
-import { NavComponent } from './components/nav/nav.component';
-import { AuthButtonComponent } from './components/auth-button/auth-button.component';
-import { AuthLoginButtonComponent } from './components/auth-login-button/auth-login-button.component';
-import { AuthLogoutButtonComponent } from './components/auth-logout-button/auth-logout-button.component';
-import { HeaderComponent } from './components/header/header.component';
+import { NavComponent } from './components/sections/nav/nav.component';
+import { AuthButtonComponent } from './components/auth/auth-button/auth-button.component';
+import { AuthLoginButtonComponent } from './components/auth/auth-login-button/auth-login-button.component';
+import { AuthLogoutButtonComponent } from './components/auth/auth-logout-button/auth-logout-button.component';
+import { HeaderComponent } from './components/sections/header/header.component';
 
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular';
@@ -17,23 +17,22 @@ import { AuthModule } from '@auth0/auth0-angular';
 // Private
 import { DemoComponent } from './private/demo/demo.component';
 import { NgxUiLoaderModule } from "ngx-ui-loader";
-import { FooterComponent } from './components/footer/footer.component';
-import { BlogHomeComponent } from './components/blog-home/blog-home.component';
+import { FooterComponent } from './components/sections/footer/footer.component';
+import { BlogHomeComponent } from './components/blog/blog-home/blog-home.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { ContactComponent } from './components/sections/contact/contact.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { PageNotfoundComponent } from './components/page-notfound/page-notfound.component';
-import { BlogCardComponent } from './components/blog-card/blog-card.component';
-import { BlogPostDetailsComponent } from './components/blog-post-details/blog-post-details.component';
-import { BlogSearchComponent } from './components/blog-search/blog-search.component';
-import { BlogRecentPostsComponent } from './components/blog-recent-posts/blog-recent-posts.component';
-import { BlogCategoriesComponent } from './components/blog-categories/blog-categories.component';
-import { BlogTagsComponent } from './components/blog-tags/blog-tags.component';
-import { HeroSectionComponent } from './components/hero-section/hero-section.component';
-import { CarouselSectionComponent } from './components/carousel-section/carousel-section.component';
-import { TopFeaturesComponent } from './components/top-features/top-features.component';
-import { AboutSectionComponent } from './components/about-section/about-section.component';
+import { BlogCardComponent } from './components/blog/blog-card/blog-card.component';
+import { BlogPostDetailsComponent } from './components/blog/blog-post-details/blog-post-details.component';
+import { BlogSearchComponent } from './components/blog/blog-search/blog-search.component';
+import { BlogRecentPostsComponent } from './components/blog/blog-recent-posts/blog-recent-posts.component';
+import { BlogCategoriesComponent } from './components/blog/blog-categories/blog-categories.component';
+import { BlogTagsComponent } from './components/blog/blog-tags/blog-tags.component';
+import { HeroSectionComponent } from './components/sections/hero-section/hero-section.component';
+import { CarouselSectionComponent } from './components/sections/carousel-section/carousel-section.component';
+import { TopFeaturesComponent } from './components/sections/top-features/top-features.component';
 
 @NgModule({
   declarations: [
@@ -59,8 +58,7 @@ import { AboutSectionComponent } from './components/about-section/about-section.
     BlogTagsComponent,
     HeroSectionComponent,
     CarouselSectionComponent,
-    TopFeaturesComponent,
-    AboutSectionComponent
+    TopFeaturesComponent
   ],
   imports: [
     BrowserModule,
