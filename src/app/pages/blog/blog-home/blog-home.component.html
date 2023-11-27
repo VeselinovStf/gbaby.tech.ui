@@ -17,69 +17,14 @@
 <div class="container-xxl">
     <div class="container">
         <div class="row" >
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <div class="row g-4">
                     <ng-container *ngFor="let post of filteredPosts">
                         <app-blog-card class="col-lg-4 col-md-6 wow fadeInUp" [post]="post"></app-blog-card>
                     </ng-container>
                 </div>
             </div>
-           
-            <div class="col-lg-2">
-            
-                <app-blog-search (textChange)="onTextChange($event)"></app-blog-search>
-                <app-blog-recent-posts [posts]="rescentPosts"></app-blog-recent-posts>
-                <app-blog-categories (categoryChange)="onCategorySelected($event)" [categories]="categories"></app-blog-categories>
-                <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
-            
-            </div>
         </div>
-        
-        <!-- <div class="row" *ngIf="isLoaded">
-            <div class="col-lg-10">
-                <div *ngFor="let post of filteredPosts">
-                    <app-blog-card [post]="post"></app-blog-card>
-                </div>
-
-            </div>
-            <div class="col-lg-2">
-
-                <app-blog-search (textChange)="onTextChange($event)"></app-blog-search>
-                <app-blog-recent-posts [posts]="rescentPosts"></app-blog-recent-posts>
-                <app-blog-categories (categoryChange)="onCategorySelected($event)"
-                    [categories]="categories"></app-blog-categories>
-                <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
-
-            </div>
-        </div> -->
-
+     
     </div>
 </div>
-<!-- Team End -->
-<!-- 
-<section class="blog-posts grid-system">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="all-blog-posts">
-                    <div class="row" *ngIf="isLoaded">
-                        <div class="col-lg-6" *ngFor="let post of filteredPosts">
-                            <app-blog-card [post]="post"></app-blog-card>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="sidebar">
-                    <div class="row">
-                        <app-blog-search (textChange)="onTextChange($event)"></app-blog-search>
-                        <app-blog-recent-posts [posts]="rescentPosts"></app-blog-recent-posts>
-                        <app-blog-categories (categoryChange)="onCategorySelected($event)"
-                            [categories]="categories"></app-blog-categories>
-                        <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->

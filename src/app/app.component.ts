@@ -7,6 +7,7 @@ import { IHomePage } from './types/ihomePage';
 import { isDevMode } from '@angular/core';
 import { INav } from './types/inav';
 import { NavigationService } from './services/navigation/navigation.service';
+import { ILocaleString } from './types/ilocaleString';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ export class AppComponent implements OnInit {
   serviceNavigation!: INav;
   quickLinkNavigation!: INav;
   addressNavigation!: INav;
+  siteTitle!: ILocaleString;
 
   constructor(
     private router: Router,
@@ -52,6 +54,7 @@ export class AppComponent implements OnInit {
         this.serviceNavigation = n.serviceNav
         this.quickLinkNavigation = n.quickLinkNav
         this.addressNavigation = n.addressNav
+        this.siteTitle = n.title;
 
       }).catch((error) => {
         if (isDevMode()) {

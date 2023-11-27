@@ -36,6 +36,9 @@ export class NavigationService {
 
   getFooterNav(): Promise<any> {
     return this.sanityService.getClient().option.fetch(`*[_type == "siteConfig"]{
+      title{
+          "text": ${this.selectedLocale.name}
+      },
       socialNav->{ 
         _id,     
         title{
