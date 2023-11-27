@@ -14,13 +14,32 @@
 
 
 <!-- Team Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl">
     <div class="container">
-        <div class="row" *ngIf="isLoaded">
+        <div class="row" >
             <div class="col-lg-10">
-                <p *ngFor="let post of filteredPosts">
+                <div class="row g-4">
+                    <ng-container *ngFor="let post of filteredPosts">
+                        <app-blog-card class="col-lg-4 col-md-6 wow fadeInUp" [post]="post"></app-blog-card>
+                    </ng-container>
+                </div>
+            </div>
+           
+            <div class="col-lg-2">
+            
+                <app-blog-search (textChange)="onTextChange($event)"></app-blog-search>
+                <app-blog-recent-posts [posts]="rescentPosts"></app-blog-recent-posts>
+                <app-blog-categories (categoryChange)="onCategorySelected($event)" [categories]="categories"></app-blog-categories>
+                <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
+            
+            </div>
+        </div>
+        
+        <!-- <div class="row" *ngIf="isLoaded">
+            <div class="col-lg-10">
+                <div *ngFor="let post of filteredPosts">
                     <app-blog-card [post]="post"></app-blog-card>
-                </p>
+                </div>
 
             </div>
             <div class="col-lg-2">
@@ -32,7 +51,7 @@
                 <app-blog-tags (tagChange)="onTagSelected($event)" [tags]="tags"></app-blog-tags>
 
             </div>
-        </div>
+        </div> -->
 
     </div>
 </div>
