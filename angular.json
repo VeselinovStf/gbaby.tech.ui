@@ -45,7 +45,9 @@
               "src/assets/lib/parallax/parallax.min.js",
               "src/assets/lib/isotope/isotope.pkgd.min.js",
               "src/assets/lib/lightbox/js/lightbox.min.js",
-              "src/assets/js/main.js"     
+              "src/assets/js/main.js",     
+              "src/assets/js/recaptcha.js",     
+              "src/assets/js/scripts.js" 
             ]
           },
           "configurations": {

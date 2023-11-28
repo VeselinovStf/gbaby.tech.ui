@@ -14,12 +14,14 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { NgxUiLoaderModule } from "ngx-ui-loader";
 import { FooterComponent } from './components/sections/footer/footer.component';
 import { PrivateModule } from './modules/private/private.module';
+import { NewsLetterComponent } from './components/contacts/news-letter/news-letter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    NewsLetterComponent
   ],
   imports: [
     BrowserModule,
