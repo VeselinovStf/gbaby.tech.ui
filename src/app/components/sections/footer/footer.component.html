@@ -4,8 +4,8 @@
             <div *ngIf="addressNavigation" class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">{{addressNavigation.title.text}}</h4>
                 <div *ngFor="let address of addressNavigation.items">
-                    <p class="mb-2"><a class="btn btn-link" href="{{address.internalHref}}"><i
-                                class="{{address.icon}}">{{address.text.text}}</i></a></p>
+                    <p class="mb-2"><a class="btn btn-link" href="{{address.internalHref}}">{{address.text.text}}</a>
+                    </p>
 
                 </div>
                 <div class="d-flex pt-2" *ngIf="socialNavigation">
