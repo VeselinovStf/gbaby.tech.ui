@@ -45,6 +45,7 @@ export class NavigationService {
            "text": ${this.selectedLocale.name}
         }, 
         items[]{
+          internalHref,
            icon,
           text{
             "text": ${this.selectedLocale.name}
@@ -58,6 +59,7 @@ export class NavigationService {
         },
         
         items[]{
+          internalHref,
           icon,
           text{
             "text": ${this.selectedLocale.name}
@@ -71,6 +73,7 @@ export class NavigationService {
         },
         
         items[]{
+          internalHref,
            icon,
           text{
             "text": ${this.selectedLocale.name}
@@ -83,6 +86,7 @@ export class NavigationService {
            "text": ${this.selectedLocale.name}
         },   
         items[]{
+          internalHref,
           icon,
           text{
             "text": ${this.selectedLocale.name}

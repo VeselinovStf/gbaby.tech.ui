@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
         this.spinnerService.stop(); // TODO: remove from here
       }).catch((error) => {
         if (isDevMode()) {
-          console.log(error)
+          console.log(`navigationService getMainNavigation: Error: ${error}`)
         }
 
       })
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
 
       }).catch((error) => {
         if (isDevMode()) {
-          console.log(error)
+          console.log(`navigationService getFooterNav: Error: ${error}`)
         }
       })
 
@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
 
       }).catch((error) => {
         if(isDevMode()){
-          console.log(error);
+          console.log(`homePageService getHomePage: Error: ${error}`);
         }      
       })
   }
