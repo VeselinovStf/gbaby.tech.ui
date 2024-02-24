@@ -28,13 +28,16 @@
 
 <div class="" data-wow-delay="0.1s">
     <div class="team-item rounded">
-        <img class="img-fluid" src="assets/img/team-1.jpg" alt="">
+        <div class="card">
+            <img class="card-img-top" src="{{post.mainImage.asset.url}}" alt="Card image cap">
+        </div>
+
         <div class="team-text">
-            <a  [routerLink]="['/blog', post.href ]">
+            <a [routerLink]="['/blog', post.href ]">
                 <h4 class="mb-0">{{post.title.text}}</h4>
                 <p class="text-primary">{{post.category.name.text}}</p>
             </a>
-           
+
             <div class="team-social d-flex">
                 <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
