@@ -52,6 +52,11 @@ export class BlogService {
         url
       }
     },
+  prevImage{
+      asset->{
+        url
+      }
+    },
   title{"text": en},
   href,
   description{"text": en},

@@ -14,36 +14,22 @@
 <!-- Page Header End -->
 
 <!-- About Start -->
-<div *ngIf="isLoaded" class="container-xxl py-5">
-    <div class="container">
+<div *ngIf="isLoaded" class="container-xxl">
+    <div class="">
         <div class="row">
-            <img class="" data-wow-delay="0.1s" src="{{post.mainImage.asset.url}}">
+            <img data-wow-delay="0.1s" src="{{post.mainImage.asset.url}}">
             <div class="col-xl-9 col-lg-9 col-sm-9 wow fadeInUp" data-wow-delay="0.1s">
 
 
-                <h1 class=""><a [routerLink]="['/blog', post.href ]">
+                <h1 class="mt-4"><a [routerLink]="['/blog', post.href ]">
                         {{post.title.text}}
                     </a></h1>
                 <p class="text-primary mb-4">{{post.description.text}}</p>
-                <p class="mb-4">Authors: </p>
-                <ul class=" post-info">
-                    <li><a href="#">{{post.author.name.text}}</a></li>
-                </ul>
+
                 <div [innerHTML]="post.content ">
 
                 </div>
-                <div class="post-options">
-                    <div class="row">
-                        <p class="mb-4">Tags: </p>
-                        <div class="col-lg-12">
-                            <ul class="post-tags" *ngFor="let tag of post.tags">
-                                <li><i class="fa fa-tags"></i></li>
-                                <li><a href="/">{{tag.title.text}}</a>,</li>
-                            </ul>
 
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>

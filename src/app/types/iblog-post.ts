@@ -12,6 +12,7 @@ export interface IBlogPost {
     author: IBlogPostAuthor;
     category: IBlogPostCategory;
     mainImage: IImage;
+    prevImage: IImage;
     tags: IBlogPostTag[];
     content: any;
 }

@@ -42,6 +42,17 @@ export default defineType({
             description: 'Category',
             to: { type: 'blog-category-page' },
         },
+         {
+            name: 'prevImage',
+            title: 'Prewiew image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+            description: 'Prewiew image', 
+            validation: Rule =>
+                Rule.required()
+        },
         {
             name: 'mainImage',
             title: 'Main image',
@@ -50,6 +61,8 @@ export default defineType({
                 hotspot: true,
             },
             description: 'Optional image',
+            validation: Rule =>
+                Rule.required()
         },
         {
             name: "tags",

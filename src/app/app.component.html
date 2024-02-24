@@ -1,9 +1,11 @@
-<ngx-ui-loader fgsColor="#F05F40"></ngx-ui-loader>
+<ngx-ui-loader fgsColor="green"></ngx-ui-loader>
 
-<app-nav [nav]="topNavigation" ></app-nav>
+<app-nav [nav]="topNavigation"></app-nav>
 
 <!-- <app-header *ngIf="isLoaded() && getHeader().display" [header]="getHeader()"></app-header> -->
 
 <router-outlet></router-outlet>
 
-<app-footer [socialNavigation]="socialNavigation" [serviceNavigation]="serviceNavigation" [quickLinkNavigation]="quickLinkNavigation" [addressNavigation]="addressNavigation" [siteTitle]="siteTitle"></app-footer>
+<app-footer [socialNavigation]="socialNavigation" [serviceNavigation]="serviceNavigation"
+    [quickLinkNavigation]="quickLinkNavigation" [addressNavigation]="addressNavigation"
+    [siteTitle]="siteTitle"></app-footer>
