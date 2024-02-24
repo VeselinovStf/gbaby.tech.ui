@@ -24,27 +24,30 @@
                 <h4 class="text-white mb-4">{{addressNavigation.title.text}}</h4>
                 <div *ngFor="let address of addressNavigation.items">
                     <p class="mb-2"><i class="{{address.icon}}"></i>{{address.text.text}}</p>
-                   
-                    </div>
-                    <div class="d-flex pt-2" *ngIf="socialNavigation">
-                        <a *ngFor="let social of socialNavigation.items" class="btn btn-square btn-outline-light rounded-circle me-2" href="{{social.internalHref}}"><i
-                                class="{{social.icon}}"></i></a>                    
-                    </div>
 
-               
+                </div>
+                <div class="d-flex pt-2" *ngIf="socialNavigation">
+                    <a *ngFor="let social of socialNavigation.items"
+                        class="btn btn-square btn-outline-light rounded-circle me-2" href="{{social.internalHref}}"><i
+                            class="{{social.icon}}"></i></a>
+                </div>
+
+
             </div>
             <div class="col-lg-3 col-md-6" *ngIf="serviceNavigation">
                 <h4 class="text-white mb-4">{{serviceNavigation.title.text}}</h4>
-                <a *ngFor="let service of serviceNavigation.items"  class="btn btn-link" href="{{service.internalHref}}">{{service.text.text}}</a>
+                <a *ngFor="let service of serviceNavigation.items" class="btn btn-link"
+                    href="{{service.internalHref}}">{{service.text.text}}</a>
             </div>
             <div class="col-lg-3 col-md-6" *ngIf="quickLinkNavigation">
                 <h4 class="text-white mb-4">{{quickLinkNavigation.title.text}}</h4>
-                <a  *ngFor="let quick of quickLinkNavigation.items" class="btn btn-link" href="{{quick.internalHref}}">{{quick.text.text}}</a>
+                <a *ngFor="let quick of quickLinkNavigation.items" class="btn btn-link"
+                    href="{{quick.internalHref}}">{{quick.text.text}}</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <app-news-letter></app-news-letter>
             </div>
-            
+
         </div>
     </div>
 </div>
