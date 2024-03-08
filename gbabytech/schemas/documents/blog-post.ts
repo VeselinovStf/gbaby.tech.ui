@@ -21,6 +21,11 @@ export default defineType({
                 Rule.required()
         },
         {
+            title: 'date',
+            name: 'date',
+            type: 'datetime'
+        },
+        {
             name: "href",
             type: "string",
             title: "Anchor href to post details"

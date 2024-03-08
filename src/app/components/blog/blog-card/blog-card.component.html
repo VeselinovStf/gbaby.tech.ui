@@ -12,7 +12,8 @@
             <a [routerLink]="['/blog', post.href ]">
                 <!-- Title and description -->
                 <h4 class="mb-0">{{post.title.text}}</h4>
-                <p class="text-primary mb-4">{{post.description.text}}</p>
+                <p class="text-primary mt-2">{{post.description.text}}</p>
+                <p class="text-primary">{{post.date | date:"MMM d, y"}}</p>
             </a>
         </div>
     </div>

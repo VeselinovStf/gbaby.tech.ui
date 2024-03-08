@@ -31,6 +31,7 @@ export class BlogService {
       }
     },
   title{"text": en},
+  date,
   href,
   description{"text": en},
   author->{name{ "text": en}}  ,
@@ -57,6 +58,7 @@ export class BlogService {
         url
       }
     },
+  date,
   title{"text": en},
   href,
   description{"text": en},
